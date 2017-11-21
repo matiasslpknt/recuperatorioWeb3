@@ -28,14 +28,8 @@ public class UsuarioService extends GenericService<Usuario, Integer> implements 
     @Override
     public ArrayList<Concierto> getConciertosEnMiPais(Usuario usuario) throws ServiceException {
         ArrayList<Concierto> cons = new ArrayList<Concierto>();
-        ArrayList<Concierto> aux = new ArrayList<Concierto>();
         try {
-            aux = (ArrayList<Concierto>)daoConcierto.listPais(usuario.getPais());
-            for (Concierto c : aux) {
-                if (c.getPais().equals(usuario.getPais())) {
-                    cons.add(c);
-                }
-            }
+            cons = (ArrayList<Concierto>)daoConcierto.listPais(usuario.getPais());
         } catch (PersistenceException ex) {
             java.util.logging.Logger.getLogger(UsuarioService.class.getName()).log(Level.SEVERE, null, ex);
         }
