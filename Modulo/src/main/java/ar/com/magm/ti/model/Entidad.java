@@ -14,34 +14,34 @@ import org.hibernate.annotations.Proxy;
 @Entity
 @Proxy(lazy = false)
 @Access(value = AccessType.FIELD)
-@Table(name = "entidad")
+@Table(name = "artista")
 public class Entidad implements Serializable {
 
 	private static final long serialVersionUID = 2464927409480955012L;
 	@Id
 	@GeneratedValue
-	private int idEntidad;
+	private int idArtista;
 
 
 	private String nombre;
 
 	@Override
 	public int hashCode() {
-		return getIdEntidad();
+		return getIdArtista();
 
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Entidad: %s - %s", getIdEntidad(), getNombre());
+		return String.format("Entidad: %s - %s", getIdArtista(), getNombre());
 	}
 
-	public int getIdEntidad() {
-		return idEntidad;
+	public int getIdArtista() {
+		return idArtista;
 	}
 
-	public void setIdEntidad(int idEntidad) {
-		this.idEntidad = idEntidad;
+	public void setIdArtista(int idArtista) {
+		this.idArtista = idArtista;
 	}
 
 	public String getNombre() {
@@ -54,6 +54,6 @@ public class Entidad implements Serializable {
 	
 	@Override
 	public boolean equals(Object obj) {
-		return getIdEntidad()==((Entidad)obj).getIdEntidad();
+		return getIdArtista()==((Entidad)obj).getIdArtista();
 	}
 }

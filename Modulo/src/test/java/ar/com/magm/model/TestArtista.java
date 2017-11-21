@@ -41,7 +41,7 @@ public class TestArtista extends BaseTest {
 
         artista = (Artista) service.save(artista);
 
-        assertTrue(artista.getIdEntidad()>-1);
+        assertTrue(artista.getIdArtista()>-1);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class TestArtista extends BaseTest {
 
         Artista artista = service.load(8);
 
-        assertEquals(8, artista.getIdEntidad());
+        assertEquals(8, artista.getIdArtista());
     }
 
     @Test

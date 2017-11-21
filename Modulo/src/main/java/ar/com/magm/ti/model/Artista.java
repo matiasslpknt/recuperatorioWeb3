@@ -44,6 +44,6 @@ public class Artista extends Entidad implements Serializable{
 
     @Override
     public String toString() {
-        return getIdEntidad() + " : " + getNombre() + " : " + genero.toString();
+        return getIdArtista() + " : " + getNombre() + " : " + genero.toString();
     }
 }

@@ -26,9 +26,9 @@ public class TestEntidad extends BaseTest {
 		Entidad e=new Entidad();
 		e.setNombre("nombre");
 		e=entidadService.save(e);
-		assertTrue("Error id entidad", e.getIdEntidad()>-1 );
+		assertTrue("Error id entidad", e.getIdArtista()>-1 );
 		assertEquals("Error nombre entidad", e.getNombre(), "nombre");
-		int id=e.getIdEntidad();
+		int id=e.getIdArtista();
 		
 		Entidad cargada=entidadService.load(id);
 		assertEquals("Error en la carga", e,cargada);
